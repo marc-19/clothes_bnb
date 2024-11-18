@@ -38,7 +38,17 @@ sellers.each do |seller|
   end
 end
 
-Booking.create!(start_date: "24/12/2024", end_date: "31/12/2024", total_price: rand(10..100), user_id: our_user.id, item_id: items.sample.id)
+#Booking seed
+bookings = []
+
+bookings << Booking.create!(start_date: "24/12/2024", end_date: "31/12/2024", total_price: rand(10..100), user_id: our_user.id, item_id: items.sample.id)
 15.times do
-  Booking.create!(start_date: "24/12/2024", end_date: "31/12/2024", total_price: rand(10..100), user_id: User.all.sample.id, item_id: items.sample.id)
+  bookings << Booking.create!(start_date: "24/12/2024", end_date: "31/12/2024", total_price: rand(10..100), user_id: User.all.sample.id, item_id: items.sample.id)
+end
+
+#Review seed
+bookings.each do |booking|
+  rand(1..3).times do
+    Review.create!(comment: Faker::Quote.yoda, rating: rand(1..5), booking_id: Booking.all.sample.id)
+  end
 end
