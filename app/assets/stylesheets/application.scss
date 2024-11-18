@@ -10,3 +10,34 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$red: #FF204E;
+$black: black;
+$grey: #717171;
+$lightgrey: #E6E5E5;
+
+
+h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "PT Sans";
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "PT Sans";
+}
+
+p {
+  font-family: "Hind Madurai";
+}
+
+a {
+  font-family: "Montserrat";
+  text-decoration: none;
+}
