@@ -1,8 +1,13 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
+
   # GET /items/new
   def new
     @item = Item.new
+  end
+  
+  def show
+    @item = Item.find(params[:id])
   end
 
   # POST /items
