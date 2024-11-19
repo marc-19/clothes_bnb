@@ -9,4 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get 'items/:id', to: 'items#show', as: 'item'
+
+  resources :items, only: [:show] do
+    post 'rent', on: :member
+  end
 end
