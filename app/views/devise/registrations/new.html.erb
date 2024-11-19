@@ -1,5 +1,5 @@
 <div class="signup">
-  <div class="container">
+  <div class="authenticate-card">
     <h2>Sign up</h2>
     <div class="input-container">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,7 +25,7 @@
                       input_html: { autocomplete: "last-name" } %>
         </div>
 
-        <div class="actions">
+        <div class="form-actions">
           <%= f.button :submit, "Sign up" , class: "btn-red"%>
         </div>
       <% end %>

@@ -1,6 +1,18 @@
+$red: #FF204E;
+$black: black;
+$grey: #717171;
+$lightgrey: #E6E5E5;
+
+
 .alert {
   position: fixed;
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  background-color: $red;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 <div class="login">
-  <div class="container">
+  <div class="authenticate-card">
     <h2>Log in</h2>
     <div class="input-container">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -18,9 +18,10 @@
             <%= f.button :submit, "Log in", class: "btn-red" %>
           </div>
         <% end %>
-
+      <div class="links">
         <%= render "devise/shared/links" %>
-    </div>
+      </div>
 
+    </div>
   </div>
 </div>
