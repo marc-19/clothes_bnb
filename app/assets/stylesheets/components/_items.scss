@@ -46,7 +46,6 @@
 
     &:hover {
       background-color: #FF204E;
-      ease:out
     }
   }
 
@@ -105,7 +104,8 @@
 .show-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
+  margin: 10px;
 }
 
 .item-container {
@@ -118,4 +118,36 @@
   flex: 0 0 500px;
   background-color: #fff; /* Optional: background color */
   border: 1px solid #ddd; /* Optional: border for styling */
+}
+
+.img-card {
+  position: relative;
+  width: 100vw; // Full width of the viewport
+  height: 25vw; // Fixed height for the banner
+  overflow: hidden; // Ensures no content spills outside the card
+
+
+  .blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
+  .product-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
 }
