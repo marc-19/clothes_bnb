@@ -6,6 +6,7 @@
 @import "buttons";
 @import "cards";
 
+
 .search-container {
   display: flex;
   align-items: center;
@@ -20,24 +21,21 @@
 .search-container > form {
   align-items: center;
   justify-content: space-between;
-  margin:auto ;
+  margin: auto;
   display: flex;
 
   input.btn {
     background-color: #ff204e;
     align-items: right;
-    margin-left: 20px;
+    margin-left: 50px;
     color: white;
     border-radius: 50%;
     font-weight: bold;
     font-size: xx-large;
     width: 75px;
     height: 75px;
-
-
   }
 }
-
 
 .avatar-image {
   width: 50px;
@@ -49,27 +47,38 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   margin: 10px;
 }
 
-.title {
-  margin-left: 10px;
-}
 .item-card {
-  flex: 1 1 calc(33.333% - 20px);
   background-color: #E6E5E5;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  color: black;
+  text-decoration: none;
+  box-sizing: border-box;
+
 }
+
+.title {
+  margin-left: 10px;
+}
+
 .items-container :hover {
   background-color: #d2d2d2;
+  border-radius: 10px;
 }
 
 .item-card-content {
   padding: 15px;
+  text-decoration: none;
+}
+
+.items-container img {
+  border-radius: 10px;
 }
 
 .item-card-image {
@@ -79,14 +88,23 @@
   padding: 20px;
   border-radius: 5px;
 }
-
+.item-description {
+  text-decoration: none;
+}
 .item-title {
   font-weight: bold;
+  text-decoration: none;
 }
 .item-price-per-day {
   color: black;
+  text-decoration: none;
+}
+
+.items-container a {
+  text-decoration: none;
 }
 
 .All {
-  color: black;
+  text-decoration: none;
+  flex: 1 1 calc(33.333% - 50px);
 }
