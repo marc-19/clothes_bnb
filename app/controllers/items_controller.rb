@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
-  
+
   def show
     @item = Item.find(params[:id])
   end
@@ -26,6 +26,6 @@ class ItemsController < ApplicationController
 
   # Strong Parameters to permit only the necessary fields
   def item_params
-    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title)
+    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, :image)
   end
 end
