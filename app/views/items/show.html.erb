@@ -1,11 +1,11 @@
 <div class="img-card">
-    <% if @item.image.attached? %>
-      <div class="blurred-bg" style="background-image: url('<%= url_for(@item.image) %>');"></div>
-      <%= image_tag @item.image, class: "product-image", alt: "Item Image" %>
-    <% else %>
-      <div class="blurred-bg" style="background-image: url('<%= asset_path('clothes.jpg') %>');"></div>
-      <%= image_tag "clothes.jpg", class: "product-image", alt: "Placeholder Image" %>
-    <% end %>
+  <% if @item.images.attached? %>
+    <div class="blurred-bg" style="background-image: url('<%= url_for(@item.images.first) %>');"></div>
+    <%= image_tag @item.images.first, class: "product-image", alt: "Item Image" %>
+  <% else %>
+    <div class="blurred-bg" style="background-image: url('<%= asset_path('clothes.jpg') %>');"></div>
+    <%= image_tag "clothes.jpg", class: "product-image", alt: "Placeholder Image" %>
+  <% end %>
 </div>
 
 
