@@ -44,3 +44,65 @@ a {
   font-family: "Montserrat";
   text-decoration: none;
 }
+
+
+.dashboard-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-subtitle {
+  text-align: center;
+  font-family: "Hind Madurai", sans-serif;
+  margin-bottom: 30px;
+}
+
+.dashboard-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.dashboard-link {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  background-color: #ff204e;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-link:hover {
+  background-color: #e01c46;
+}
+
+.dashboard-section {
+  margin-bottom: 40px;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar1 {
+  border-radius: 50%; /* Garante que o avatar fique redondo */
+  border: 3px solid #060606; /* Borda azul */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Mantém o aspecto proporcional */
+  width: 120px; /* Define largura fixa */
+  height: 120px; /* Define altura fixa para manter a forma circular */
+}

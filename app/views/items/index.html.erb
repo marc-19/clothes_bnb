@@ -1,0 +1,12 @@
+<h1>Available Items</h1>
+
+<div class="items-grid">
+  <% @items.each do |item| %>
+    <div class="item-card">
+      <h3><%= item.title %></h3>
+      <p><%= truncate(item.description, length: 100) %></p>
+      <p><strong>Price:</strong> €<%= item.price_per_day %>/day</p>
+      <%= link_to "View Item", item_path(item), class: "btn btn-primary btn-sm" %>
+    </div>
+  <% end %>
+</div>

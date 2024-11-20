@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <div class="profile-card text-center py-5 px-4 shadow">
+    <!-- Avatar do usuário -->
+    <div class="avatar-container mb-4">
+      <%= image_tag @user.avatar.attached? ? url_for(@user.avatar) : "https://static-00.iconduck.com/assets.00/person-icon-512x483-d7q8hqj4.png",
+          class: "avatar1", alt: "User avatar", width: 120, height: 120 %>
+    </div>
+
+    <h1 class="mb-4">Welcome!</h1>
+    <p class="text-muted">Here is your profile information:</p>
+
+    <div class="mt-4">
+      <p><strong>Email:</strong> <%= @user.email %></p>
+      <p><strong>Address:</strong> <%= @user.address || "No address provided" %></p>
+    </div>
+
+    <div class="mt-5">
+      <%= link_to "Back to Dashboard", dashboard_user_path(@user), class: "btn btn-primary btn-lg me-2" %>
+      <%= link_to "Back to Home", root_path, class: "btn btn-secondary btn-lg" %>
+    </div>
+  </div>
+</div>
