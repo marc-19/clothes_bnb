@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
       @items = @items.where("title ILIKE ? OR description ILIKE ?", "%#{params[:search][:search]}%", "%#{params[:search][:search]}%")
     end
   end
-  
+
   # GET /items/new
   def new
     @item = Item.new
@@ -33,6 +33,6 @@ class ItemsController < ApplicationController
 
   # Strong Parameters to permit only the necessary fields
   def item_params
-    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, :image)
+    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, images: [])
   end
 end

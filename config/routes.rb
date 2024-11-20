@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-  resources :items, only: [:new, :create]
   devise_for :users
   root to: "items#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Rotas para items
+  resources :items, only: [:new, :create, :show]
 
-  # Defines the root path route ("/")
-  # root "posts#index"
-  resources :items, only: [:show]
+  # Rotas para perfil e dashboard
+  resources :users, only: [] do
+    member do
+      get :profile # Exibe o perfil do usuário
+      get :dashboard # Exibe o dashboard do usuário
+    end
+  end
 end
