@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-
-  # Define a página inicial
-  root to: "pages#home"
+  root to: "items#index"
 
   # Rotas para items
   resources :items, only: [:new, :create, :show]

@@ -1,9 +1,13 @@
-<div class="container-fluid w-100 h-auto m-0 p-0">
-   <div class="card">
-    <%= image_tag("shoes.png") %>
-    </div>
-   </div>
+<div class="img-card">
+    <% if @item.image.attached? %>
+      <div class="blurred-bg" style="background-image: url('<%= url_for(@item.image) %>');"></div>
+      <%= image_tag @item.image, class: "product-image", alt: "Item Image" %>
+    <% else %>
+      <div class="blurred-bg" style="background-image: url('<%= asset_path('clothes.jpg') %>');"></div>
+      <%= image_tag "clothes.jpg", class: "product-image", alt: "Placeholder Image" %>
+    <% end %>
 </div>
+
 
 <div class="show-container">
   <div class="item-container">
@@ -20,7 +24,7 @@
   <div class="rent-card" data-controller="price-calculator" data-price-calculator-daily-price-value=<%= @item.price_per_day %>>
     <h2 class="rent-price">$<%= @item.price_per_day %> PER DAY</h2>
 
-    <%= form_with url: rent_item_path(@item), method: :post, class: "rent-form" do |f| %>
+    <%= form_with url: "#", method: :post, class: "rent-form" do |f| %>
       <div class="date-range">
         <label for="start_date">Start Date</label>
         <%= f.date_field :start_date, id: "start_date", class: "form-control", data: {price_calculator_target: "startElement", action: "input->price-calculator#calculate"} %>

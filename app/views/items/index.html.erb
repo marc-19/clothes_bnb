@@ -1,12 +1,27 @@
-<h1>Available Items</h1>
+<div class="search-container">
+  <%= simple_form_for :search, url: root_path, method: "get" do |f| %>
+  <%= f.input :opening_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :ending_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :search %>
+  <%= f.button :submit, "🔍" %>
+<% end %>
+</div>
 
-<div class="items-grid">
+<h1 class="title">All Items</h1>
+
+<div class="items-container">
   <% @items.each do |item| %>
-    <div class="item-card">
-      <h3><%= item.title %></h3>
-      <p><%= truncate(item.description, length: 100) %></p>
-      <p><strong>Price:</strong> €<%= item.price_per_day %>/day</p>
-      <%= link_to "View Item", item_path(item), class: "btn btn-primary btn-sm" %>
-    </div>
+    <div class="All">
+    <%= link_to item_path(item) do %>
+      <div class="item-card">
+        <img src="https://mitorojo.com/wp-content/uploads/2024/04/C-de-1966-rojo_1-copia.jpg" alt="<%= item.title %>" class="item-card-image">
+        <div class="item-card-content">
+          <h4 class="item-title"><%= item.title %></h4>
+          <h6 class="item-description"><%= item.description %></h6>
+          <p class ="item-price-per-day"><%= "#{item.price_per_day} €" %></p>
+        </div>
+      </div>
+      </div>
+    <% end %>
   <% end %>
 </div>

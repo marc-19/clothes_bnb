@@ -1,16 +1,17 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
 
+  def index
+    @items = Item.all
+    if params.dig(:search, :search).present?
+      @items = @items.where("title ILIKE ? OR description ILIKE ?", "%#{params[:search][:search]}%", "%#{params[:search][:search]}%")
+    end
+  end
+
   # GET /items/new
   def new
     @item = Item.new
   end
-
-  # GET /HOMEPAGE
-  def index
-    @items = Item.all
-  end
-
 
   def show
     @item = Item.find(params[:id])
@@ -32,6 +33,6 @@ class ItemsController < ApplicationController
 
   # Strong Parameters to permit only the necessary fields
   def item_params
-    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title)
+    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, :image)
   end
 end
