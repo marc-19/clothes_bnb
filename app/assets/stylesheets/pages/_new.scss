@@ -1,0 +1,45 @@
+.new-item {
+  background-image: url('https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  height: 100%; /* Exatamente 100% da altura da janela */
+  width: 100%; /* Garante que cobre 100% da largura */
+  display: flex; /* Habilita Flexbox */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  position: relative; /* Garante que o contêiner seja relativo */
+  overflow: hidden; /* Evita rolagem interna */
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  height: auto; /* Altura automática */
+}
+
+.form-label {
+  color: rgb(5, 5, 5);
+  font-weight: bold;
+}
+
+
+.form-control {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+h1 {
+  color: #FF204E; /* Our Red */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow */
+  font-size: 2.5rem; /* Bigger fonts */
+  margin-bottom: 20px; /* More space between */
+}
+}

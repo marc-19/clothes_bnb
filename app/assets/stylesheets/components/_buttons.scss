@@ -1,0 +1,28 @@
+.btn-red {
+  background-color: $red !important;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+}
+
+
+.red-button {
+  background-color: #FF204E;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.red-button:hover {
+  background-color: #E01C46;
+  transform: scale(1.05);
+}
