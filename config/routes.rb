@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
 
-  # Rotas para items
-  resources :items, only: [:new, :create, :show]
-
+  resources :items, only: [:new, :create, :show] do
+    resources :bookings, only: [:create]
+  end
   # Rotas para perfil e dashboard
   resources :users, only: [] do
     member do

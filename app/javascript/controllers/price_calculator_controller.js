@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="price-calculator"
 export default class extends Controller {
-  static targets = ["startElement", "endElement", "daysElement", "totalElement"]
+  static targets = ["startElement", "endElement", "daysElement", "totalElement", "totalPrice"]
   static values = {dailyPrice: Number}
 
   connect() {
@@ -26,7 +26,9 @@ export default class extends Controller {
       const dayCount = (timeDiff/1000/60/60/24) + 1
       this.daysElementTarget.innerText = dayCount
 
-      this.totalElementTarget.innerText = dayCount * this.dailyPriceValue + 5
+      const totalPrice = dayCount * this.dailyPriceValue + 5
+      this.totalElementTarget.innerText = totalPrice
+      this.totalPriceTarget.value = totalPrice
       console.log(this.dailyPriceValue)
     }
   }
