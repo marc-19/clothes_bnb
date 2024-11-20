@@ -1,19 +1,17 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
 
-  # GET /items/new
   def new
     @item = Item.new
   end
-  
+
   def show
     @item = Item.find(params[:id])
   end
 
-  # POST /items
   def create
     @item = Item.new(item_params)
-    @item.user_id = current_user.id # Associate the item to the user logged (if you have autentification)
+    @item.user_id = current_user.id
 
     if @item.save
       redirect_to root_path, notice: "Item successfully created!"
@@ -28,4 +26,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title)
   end
+
 end
