@@ -9,17 +9,19 @@
 
 <h1 class="title">All Items</h1>
 
-<a href="#" class="All">
 <div class="items-container">
   <% @items.each do |item| %>
-    <div class="item-card">
-      <img src="https://mitorojo.com/wp-content/uploads/2024/04/C-de-1966-rojo_1-copia.jpg" alt="<%= item.title %>" class="item-card-image">
-      <div class="item-card-content">
-        <h4 class="item-title"><%= item.title %></h4>
-        <h6 class="item-description"><%= item.description %></h6>
-        <p class ="item-price-per-day"><%= "#{item.price_per_day} €" %></p>
-
+    <div class="All">
+    <%= link_to item_path(item) do %>
+      <div class="item-card">
+        <img src="https://mitorojo.com/wp-content/uploads/2024/04/C-de-1966-rojo_1-copia.jpg" alt="<%= item.title %>" class="item-card-image">
+        <div class="item-card-content">
+          <h4 class="item-title"><%= item.title %></h4>
+          <h6 class="item-description"><%= item.description %></h6>
+          <p class ="item-price-per-day"><%= "#{item.price_per_day} €" %></p>
+        </div>
       </div>
-    </div>
+      </div>
+    <% end %>
   <% end %>
-</div></a>
+</div>
