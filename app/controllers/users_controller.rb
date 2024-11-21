@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user = current_user
-    @user_items = @user.items
+    @created_items = current_user.items
+    @rented_items = current_user.rentals.includes(:item) # Certifique-se que rentals está associado
   end
 
   private
