@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :items, only: [:new, :create, :show] do
     resources :bookings, only: [:create]
+    post 'book', to: 'bookings#create', as: :book
   end
 
   resources :bookings, only: [] do
