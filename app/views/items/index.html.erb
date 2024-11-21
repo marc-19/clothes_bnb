@@ -3,30 +3,29 @@
     <%= f.input :opening_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :ending_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :search %>
-    <%= f.button :submit, "🔍" %>
+    <%= button_tag type: :submit do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
   <% end %>
 </div>
 
-<h1 class="title">All Items</h1>
+<h1 class="title">COLLECTION</h1>
 
 <div class="items-container">
   <% @items.each do |item| %>
-    <div class="All">
-      <%= link_to item_path(item) do %>
-        <div class="item-card">
-          <% if item.images.attached? %>
-            <%= image_tag url_for(item.images.first), alt: item.title, class: "item-card-image" %>
-          <% else %>
-            <!-- Default image if no images are attached -->
-            <img src="https://mitorojo.com/wp-content/uploads/2024/04/C-de-1966-rojo_1-copia.jpg" alt="<%= item.title %>" class="item-card-image">
-          <% end %>
-          <div class="item-card-content">
-            <h4 class="item-title"><%= item.title %></h4>
-            <h6 class="item-description"><%= truncate(item.description, length: 100) %></h6>
-            <p class="item-price-per-day"><%= "#{item.price_per_day} € per day" %></p>
-          </div>
+    <%= link_to item_path(item) do %>
+      <div class="product-card-inner">
+        <% if item.images.attached? %>
+          <%= image_tag url_for(item.images.first), alt: item.title, class: "item-card-image" %>
+        <% else %>
+          <img src="https://cdn.savageuniversal.com/media/wysiwyg/2022/blog/categories/blog/041922_Lindsay_Adler_1681-a.jpeg" alt="<%= item.title %>" class="item-card-image">
+        <% end %>
+        <div class="item-card-content">
+          <h4 class="item-title"><%= item.title %></h4>
+          <h6 class="item-description"><%= truncate(item.description, length: 100) %></h6>
+          <p class="item-price-per-day"><%= "#{item.price_per_day} € per day" %></p>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
