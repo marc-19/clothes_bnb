@@ -74,8 +74,6 @@ $lightgrey: #E6E5E5;
     }
   }
 
-
-
 .list-item-card {
   margin: 50px auto;
   padding: 20px;
@@ -128,6 +126,7 @@ $lightgrey: #E6E5E5;
       }
     }
 
+
     .form-actions {
       text-align: center;
 
@@ -146,4 +145,137 @@ $lightgrey: #E6E5E5;
       }
     }
   }
+}
+
+
+.review-card {
+  min-width: 300px;
+  background-color: white;
+  border: 1px solid #e6e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-review-card {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 600px; // Matches the list-item-card width
+
+  h1 {
+    text-align: center;
+    color: $red; // Matches the brand color
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .input-container {
+    .form-inputs {
+      margin-bottom: 20px;
+
+      .input {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          font-size: 0.9rem;
+          color: $grey;
+          margin-bottom: 5px;
+        }
+
+        select,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid $grey;
+          border-radius: 4px;
+          font-size: 1rem;
+          color: $black;
+
+          &:focus {
+            outline: none;
+            border-color: $red;
+            box-shadow: 0 0 5px rgba(255, 32, 78, 0.5);
+          }
+        }
+
+        textarea {
+          resize: none; // Prevents manual resizing
+        }
+      }
+    }
+
+    .form-actions {
+      text-align: center;
+
+      .btn-red {
+        background-color: $red;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($red, 10%);
+        }
+      }
+    }
+  }
+}
+.items-container{
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+
+  a :hover {
+    background-color: rgb(234, 234, 234);
+    }
+
+  .product-card-inner {
+    background-color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  width: 450px;
+  height: 550px;
+  margin-top: 0px;
+  border-style: solid;
+  border-color: black;
+  }
+
+
+  .item-card-content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+  }
+
+  .item-card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0px;
+    margin: 0px;
+  }
+
+  a {
+    width: 450px;
+    height: 550px;
+    margin-top: 30px;
+  }
+
+  .item-price-per-day {
+    text-decoration: underline;
+  }
+}
+
+.search-container {
+  background-color: red;
 }
