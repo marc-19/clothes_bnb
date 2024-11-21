@@ -12,8 +12,8 @@
       <% @created_items.each do |item| %>
         <div class="col-md-4">
           <div class="card shadow-sm">
-            <% if item.images.attached? %>
-              <%= image_tag url_for(item.images.first), class: "card-img-top", alt: item.title %>
+            <% if item.image.attached? %>
+              <%= image_tag url_for(item.image), class: "card-img-top", alt: item.title %>
             <% else %>
               <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
             <% end %>
@@ -36,8 +36,8 @@
     <% @booked_items.each do |item| %>
       <div class="col-md-4">
         <div class="card shadow-sm">
-          <% if item.images.attached? %>
-            <%= image_tag url_for(item.images.first), class: "card-img-top", alt: item.title %>
+          <% if item.image.attached? %>
+            <%= image_tag url_for(item.image), class: "card-img-top", alt: item.title %>
           <% else %>
             <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
           <% end %>
