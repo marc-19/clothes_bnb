@@ -1,54 +1,46 @@
-<div class="container my-5">
-  <div class="text-center">
-    <h1 class="mb-4 dashboard-title">Your Dashboard</h1>
-  </div>
-
-
-  <!-- Section for Created Items -->
-  <div class="section">
-    <h2 class="text-center">Your Created Items</h2>
-    <p class="text-center text-muted">Below is the history of items you've listed.</p>
-    <div class="row g-3">
-      <% @created_items.each do |item| %>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <% if item.image.attached? %>
-              <%= image_tag url_for(item.image), class: "card-img-top", alt: item.title %>
-            <% else %>
-              <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
-            <% end %>
-            <div class="card-body">
-              <h5 class="card-title"><%= item.title %></h5>
-              <p class="card-text"><%= truncate(item.description, length: 50) %></p>
-              <p class="card-text"><strong>Price:</strong> €<%= item.price_per_day %> per day</p>
-            </div>
+<!-- Section for Created Items -->
+ <div class="section">
+  <h2 class="text-center">Your Listed Items</h2>
+  <p class="text-center text-muted">Below is the history of items you've listed.</p>
+  <div class="items-container">
+    <% @created_items.each do |item| %>
+      <%= link_to item_path(item) do %>
+        <div class="product-card-inner">
+          <% if item.image.attached? %>
+            <%= image_tag url_for(item.image), alt: item.title, class: "item-card-image" %>
+          <% else %>
+            <img src="https://cdn.savageuniversal.com/media/wysiwyg/2022/blog/categories/blog/041922_Lindsay_Adler_1681-a.jpeg" alt="<%= item.title %>" class="item-card-image">
+          <% end %>
+          <div class="item-card-content">
+            <h4 class="item-title"><%= item.title %></h4>
+            <h6 class="item-description"><%= truncate(item.description, length: 100) %></h6>
+            <p class="item-price-per-day"><%= "#{item.price_per_day} € per day" %></p>
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-
-  <!-- Section for Rented Items -->
-<div class="section">
-  <h2 class="text-center">My Rented Items</h2>
-  <p class="text-center text-muted">Below is the history of items you've rented.</p>
-  <div class="row g-3">
-    <% @booked_items.each do |item| %>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <% if item.image.attached? %>
-            <%= image_tag url_for(item.image), class: "card-img-top", alt: item.title %>
-          <% else %>
-            <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title"><%= item.title %></h5>
-            <p class="card-text"><%= truncate(item.description, length: 50) %></p>
-            <p class="card-text"><strong>Price:</strong> €<%= item.price_per_day %> per day</p>
-          </div>
-        </div>
-      </div>
     <% end %>
   </div>
 </div>
+
+<div class="section">
+  <h2 class="text-center">My Rented Items</h2>
+  <p class="text-center text-muted">Below is the history of items you've rented.</p>
+  <div class="items-container">
+    <% @booked_items.each do |item| %>
+      <%= link_to item_path(item) do %>
+        <div class="product-card-inner">
+          <% if item.image.attached? %>
+            <%= image_tag url_for(item.image), alt: item.title, class: "item-card-image" %>
+          <% else %>
+            <img src="https://cdn.savageuniversal.com/media/wysiwyg/2022/blog/categories/blog/041922_Lindsay_Adler_1681-a.jpeg" alt="<%= item.title %>" class="item-card-image">
+          <% end %>
+          <div class="item-card-content">
+            <h4 class="item-title"><%= item.title %></h4>
+            <h6 class="item-description"><%= truncate(item.description, length: 100) %></h6>
+            <p class="item-price-per-day"><%= "#{item.price_per_day} € per day" %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>

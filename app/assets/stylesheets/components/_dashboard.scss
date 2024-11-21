@@ -1,38 +1,64 @@
 .section {
-  margin-bottom: 4rem;
+  margin-top: 40px;
 
   h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    margin-top: 10px;
+    font-size: 2rem;
+    color: #ff204e; // Example of consistent branding color
+    margin-bottom: 10px;
   }
 
-  .card {
-    border: none;
-    border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
+  p {
+    color: #717171;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .card-img-top {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
+.product-card-inner {
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 
-    .card-body {
-      h5 {
-        font-weight: bold;
-        color: #333;
-      }
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
 
-      p {
-        font-size: 0.9rem;
-        color: #666;
-      }
-    }
+.item-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-card-content {
+  padding: 10px;
+
+  h4.item-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  h6.item-description {
+    font-size: 0.9rem;
+    color: #717171;
+    margin-bottom: 10px;
+  }
+
+  p.item-price-per-day {
+    font-size: 1rem;
+    color: #ff204e;
+    font-weight: bold;
   }
 }
