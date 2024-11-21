@@ -15,8 +15,8 @@
   <% @items.each do |item| %>
     <%= link_to item_path(item) do %>
       <div class="product-card-inner">
-        <% if item.images.attached? %>
-          <%= image_tag url_for(item.images.first), alt: item.title, class: "item-card-image" %>
+        <% if item.image.attached? %>
+          <%= image_tag url_for(item.image), alt: item.title, class: "item-card-image" %>
         <% else %>
           <img src="https://cdn.savageuniversal.com/media/wysiwyg/2022/blog/categories/blog/041922_Lindsay_Adler_1681-a.jpeg" alt="<%= item.title %>" class="item-card-image">
         <% end %>
