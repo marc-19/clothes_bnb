@@ -7,13 +7,13 @@ class BookingsController < ApplicationController
     @booking.item = @item
 
     if valid_dates? && @booking.save
-      redirect_to item_path(@item), notice: "Your rental has been successfully booked!"
+      redirect_to dashboard_user_path(current_user), notice: "Your rental has been successfully booked!"
     else
       redirect_to item_path(@item), alert: "Failed to rent item! Please check your input."
     end
   end
 
-  private
+  private 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :total_price)
   end
