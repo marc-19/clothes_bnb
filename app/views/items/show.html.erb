@@ -22,7 +22,7 @@
   </div>
 
   <div class="rent-card" data-controller="price-calculator" data-price-calculator-daily-price-value=<%= @item.price_per_day %>>
-    <h2 class="rent-price">$<%= @item.price_per_day %> PER DAY</h2>
+    <h2 class="rent-price">BOOK HERE</h2>
 
     <%= form_with model: Booking.new, url: item_bookings_path(@item), method: :post, class: "rent-form" do |f| %>
       <div class="date-range">
@@ -36,10 +36,9 @@
     <% end %>
 
     <div class="summary">
-      <h3>Summary</h3>
-      <p><span  data-price-calculator-target= "daysElement" id="num-days">0</span> days × $<%= @item.price_per_day %></p>
-      <p>Additional Fee: $5</p>
-      <h4>Total: $<span data-price-calculator-target= "totalElement" id="total-price">5</span></h4>
+      <h3><span  data-price-calculator-target= "daysElement" id="num-days">0</span> days × $<%= @item.price_per_day %></h3>
+      <h3>Additional Fee: $5</h3>
+      <h2 class="total">Total: $<span data-price-calculator-target= "totalElement" id="total-price">5</span></h2>
     </div>
   </div>
 
