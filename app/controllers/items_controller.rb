@@ -15,6 +15,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @review = Review.new
+    @reviews = @item.reviews.order(created_at: :desc)
   end
 
   def create

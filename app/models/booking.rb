@@ -3,6 +3,8 @@ class Booking < ApplicationRecord
   belongs_to :item
   has_one :review, dependent: :destroy
 
+  validates :booking_id, uniqueness: true
+
   # Método para verificar se o aluguel ainda está ativo
   def active?
     end_date > Date.today
