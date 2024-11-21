@@ -3,28 +3,7 @@ $black: black;
 $grey: #717171;
 $lightgrey: #E6E5E5;
 
-
-.alert {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 1000;
-  background-color: $red;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  min-width: 250px;
-  max-width: 500px;
-  width: auto;
-  word-wrap: break-word; /* adjust text in case its too long */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.notice {
+.alert.alert-info.alert-dismissible.fade.show.m-1{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -40,4 +19,18 @@ $lightgrey: #E6E5E5;
   z-index: 1000;
   width: 300px;
   max-width: 90%;
+}
+.alert.alert-warning.alert-dismissible.fade.show.m-1 {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  background-color: rgb(225, 56, 56);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 250px;
+  max-width: 500px;
+  width: 150px;
 }

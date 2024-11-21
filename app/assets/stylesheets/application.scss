@@ -113,3 +113,8 @@ a {
   width: 120px; /* Define largura fixa */
   height: 120px; /* Define altura fixa para manter a forma circular */
 }
+
+.dashboard-title {
+  color: $red; /* Escolha a cor desejada */
+  font-weight: bold; /* Opcional: Adiciona negrito */
+}
