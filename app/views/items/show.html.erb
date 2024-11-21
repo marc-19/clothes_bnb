@@ -41,10 +41,59 @@
       <p>Additional Fee: $5</p>
       <h4>Total: $<span data-price-calculator-target= "totalElement" id="total-price">5</span></h4>
     </div>
+  </div>
 
   </div>
 
+  <div class="reviews-section">
+  <h2>Reviews</h2>
+
+  <% if @reviews.any? %>
+    <!-- Carousel -->
+    <div id="reviews-carousel" class="carousel">
+      <% @reviews.each do |review| %>
+        <div class="review-card">
+          <p class="review-rating"> <%= review.rating %> / 5 &#9733</p>
+          <p class="review-comment">"<%= review.comment.truncate(300) %>"</p>
+          <p class="review-author">- <%= review.booking.user.first_name %></p>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No reviews yet for this item.</p>
+  <% end %>
+
 </div>
+
+<% booking = Booking.find_by(user: current_user , item: @item, end_date: ..(Date.today - 1)) %>
+<% if booking %>
+    <div class="form-review-card">
+    <h1>Leave a Review</h1>
+    <div class="input-container">
+      <%= simple_form_for([booking, @review]) do |f| %>
+        <div class="form-inputs">
+          <div class="input">
+            <%= f.input :rating,
+                        as: :select,
+                        collection: [1, 2, 3, 4, 5],
+                        label: "Rating",
+                        input_html: { class: "form-control" } %>
+          </div>
+          <div class="input">
+            <%= f.input :comment,
+                        as: :text,
+                        label: "Comment",
+                        input_html: { rows: 4, placeholder: "Write your review here", class: "form-control" } %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Submit Review", class: "btn-red" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+<% end %>
 
 <%# I will have to now use the the days (user input --- id="num-days") and multiply them by the @item.price_per_day + 5 $ fee
 this will result in the "total-price"
