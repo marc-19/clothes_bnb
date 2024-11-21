@@ -29,27 +29,26 @@
   </div>
 
   <!-- Section for Rented Items -->
-  <div class="section mt-5">
-    <h2 class="text-center">My Rented Items</h2>
-    <p class="text-center text-muted">Below is the history of items you've rented.</p>
-    <div class="row g-3">
-      <% @rented_items.each do |rental| %>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <% if rental.item.images.attached? %>
-              <%= image_tag url_for(rental.item.images.first), class: "card-img-top", alt: rental.item.title %>
-            <% else %>
-              <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
-            <% end %>
-            <div class="card-body">
-              <h5 class="card-title"><%= rental.item.title %></h5>
-              <p class="card-text"><%= truncate(rental.item.description, length: 50) %></p>
-              <p class="card-text"><strong>Price:</strong> €<%= rental.item.price_per_day %> per day</p>
-              <p class="card-text"><strong>Rental Period:</strong> <%= rental.start_date %> to <%= rental.end_date %></p>
-            </div>
+<div class="section">
+  <h2 class="text-center">My Rented Items</h2>
+  <p class="text-center text-muted">Below is the history of items you've rented.</p>
+  <div class="row g-3">
+    <% @booked_items.each do |item| %>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <% if item.images.attached? %>
+            <%= image_tag url_for(item.images.first), class: "card-img-top", alt: item.title %>
+          <% else %>
+            <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= item.title %></h5>
+            <p class="card-text"><%= truncate(item.description, length: 50) %></p>
+            <p class="card-text"><strong>Price:</strong> €<%= item.price_per_day %> per day</p>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
+</div>
 </div>

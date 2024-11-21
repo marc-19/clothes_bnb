@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def dashboard
     @created_items = current_user.items
-    @rented_items = current_user.rentals.includes(:item) # Certifique-se que rentals está associado
+    @booked_items = current_user.booked_items
   end
 
   private
