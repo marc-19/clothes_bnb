@@ -74,8 +74,6 @@ $lightgrey: #E6E5E5;
     }
   }
 
-
-
 .list-item-card {
   margin: 50px auto;
   padding: 20px;
@@ -127,6 +125,7 @@ $lightgrey: #E6E5E5;
         }
       }
     }
+
 
     .form-actions {
       text-align: center;
@@ -228,4 +227,55 @@ $lightgrey: #E6E5E5;
       }
     }
   }
+}
+.items-container{
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+
+  a :hover {
+    background-color: rgb(234, 234, 234);
+    }
+
+  .product-card-inner {
+    background-color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  width: 450px;
+  height: 550px;
+  margin-top: 0px;
+  border-style: solid;
+  border-color: black;
+  }
+
+
+  .item-card-content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+  }
+
+  .item-card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0px;
+    margin: 0px;
+  }
+
+  a {
+    width: 450px;
+    height: 550px;
+    margin-top: 30px;
+  }
+
+  .item-price-per-day {
+    text-decoration: underline;
+  }
+}
+
+.search-container {
+  background-color: red;
 }
