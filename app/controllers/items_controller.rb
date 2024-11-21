@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
   # Strong Parameters to permit only the necessary fields
   def item_params
-    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, images: [])
+    params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, :image)
   end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_20_115639) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_20_114723) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,17 +67,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_115639) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
-  create_table "rentals", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
-    t.bigint "user_id", null: false
-    t.bigint "item_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_rentals_on_item_id"
-    t.index ["user_id"], name: "index_rentals_on_user_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.text "comment"
     t.integer "rating"
@@ -108,7 +97,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_115639) do
   add_foreign_key "bookings", "items"
   add_foreign_key "bookings", "users"
   add_foreign_key "items", "users"
-  add_foreign_key "rentals", "items"
-  add_foreign_key "rentals", "users"
   add_foreign_key "reviews", "bookings"
 end
