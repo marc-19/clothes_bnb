@@ -23,7 +23,7 @@
         <div class="item-card-content">
           <h4 class="item-title"><%= item.title %></h4>
           <h6 class="item-description"><%= truncate(item.description, length: 100) %></h6>
-          <p class="item-price-per-day"><%= "#{item.price_per_day} € per day" %></p>
+          <p class="item-price-per-day"><%= "$#{item.price_per_day} PER DAY" %></p>
         </div>
       </div>
     <% end %>
