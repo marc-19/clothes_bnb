@@ -1,0 +1,33 @@
+.btn.btn-primary.btn-lg.me-2 {
+  background-color: #FF204E;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.btn-primary.btn-lg.me-2:hover {
+  background-color: #E01C46;
+  transform: scale(1.05);
+}
+
+.btn.btn-secondary.btn-lg.me-2 {
+  background-color: #FF204E;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.btn-secondary.btn-lg.me-2:hover {
+  background-color: #E01C46;
+  transform: scale(1.05);
+}
