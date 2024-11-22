@@ -31,14 +31,14 @@ end
 items = []
 items_data = [
   { title: "Casual soft Trousers", category: "Trousers", description: "A stylish and versatile trouser perfect for casual outings.", image: "https://content.asos-media.com/-/media/homepages/mw/2024/september/23-us/mw_asosdesign.jpg" },
-  { title: "Nordstrom Designer vest", category: "Jacket", description: "Elegant and comfortable vest for any occasion.", image: "https://n.nordstrommedia.com/it/889a4d55-8c27-4327-a252-ae877d748e84.jpeg?h=365&w=240&dpr=2" },
-  { title: "Primitive Logo Tee", category: "T-Shirt", description: "Soft cotton tee with a minimalist logo design.", image: "https://image-cdn.hypb.st/https%3A%2F%2Fs3.store.hypebeast.com%2Fmedia%2Fimage%2F2013%2F10%2FPrimitive_Tee_Blk_2_2.jpg?fit=max&w=460&q=60" },
+  { title: "Nordstrom Designer vest", category: "Shirt", description: "Elegant and comfortable vest for any occasion.", image: "https://n.nordstrommedia.com/it/889a4d55-8c27-4327-a252-ae877d748e84.jpeg?h=365&w=240&dpr=2" },
+  { title: "Primitive Logo Tee", category: "Shirt", description: "Soft cotton tee with a minimalist logo design.", image: "https://image-cdn.hypb.st/https%3A%2F%2Fs3.store.hypebeast.com%2Fmedia%2Fimage%2F2013%2F10%2FPrimitive_Tee_Blk_2_2.jpg?fit=max&w=460&q=60" },
   { title: "Tuesday Label Dress", category: "Dress", description: "A light and breezy dress for summer evenings.", image: "https://www.tuesdaylabel.com/cdn/shop/files/TuesdayLabel-SS24-LB-468_1024x1024.jpg?v=1730345552" },
   { title: "Nude Project Hoodie", category: "Jacket", description: "Cozy and warm hoodie for lounging or going out.", image: "https://nude-project.com/cdn/shop/files/TIMEHOODASH_back.jpg?v=1716972928" },
   { title: "Levis Slim Fit Jeans", category: "Trousers", description: "Classic denim jeans with a modern slim fit.", image: "https://lsco.scene7.com/is/image/lsco/362000124-detail1-pdp-lse?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=1840" },
   { title: "Vintage New Balance Shoes", category: "Shoes", description: "Timeless shoes with a vintage vibe. You will love it", image: "https://i.ebayimg.com/images/g/qIgAAOSwtRVmuaBR/s-l1200.jpg" },
-  { title: "Stone Island Puffer Coat", category: "Jacket", description: "High-performance puffer coat for extreme weather.", image: "https://www.zoeteliefmode.nl/wp-content/uploads/2024/07/stone-island-43128-seamless-puffer-coat-bp_15mf_7hk_she55j.jpg" },
-  { title: "Patagonia Fleece Jacket", category: "Jacket", description: "Comfortable and eco-friendly fleece jacket.", image: "https://images.snowleader.com/cdn-cgi/image/f=auto,fit=scale-down,q=85/https://images.snowleader.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/P/A/PATA03589_03.jpg" },
+  { title: "Stone Island Puffer Jacket", category: "Jacket", description: "High-performance puffer coat for extreme weather.", image: "https://www.zoeteliefmode.nl/wp-content/uploads/2024/07/stone-island-43128-seamless-puffer-coat-bp_15mf_7hk_she55j.jpg" },
+  { title: "Patagonia Fleece Shirt", category: "Shirt", description: "Comfortable and eco-friendly fleece shirt.", image: "https://images.snowleader.com/cdn-cgi/image/f=auto,fit=scale-down,q=85/https://images.snowleader.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/P/A/PATA03589_03.jpg" },
   { title: "Patagonia Rain Jacket", category: "Jacket", description: "Waterproof and breathable jacket for outdoor adventures.", image: "https://www.switchbacktravel.com/sites/default/files/images/articles/Patagonia%20Boulder%20Fork%20rain%20jacket%20%28backpacking%20in%20Chile%29.jpg" }
 ]
 category = ["trousers", "t-shirt", "shoes", "jackets", "dress", "suits"]
