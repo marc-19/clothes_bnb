@@ -1,0 +1,18 @@
+.btn-adjust {
+  display: block; /* Faz o botão ocupar toda a largura disponível */
+  margin: 10px auto 0; /* Espaçamento superior e centraliza o botão */
+  width: 90%; /* Deixa o botão menor que o card para criar um padding natural */
+  text-align: center; /* Garante que o texto fique centralizado */
+}
+
+.btn-danger {
+  background-color: $red;
+  color: white;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  color: white;
+}
