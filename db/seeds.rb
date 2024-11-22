@@ -38,7 +38,7 @@ items_data = [
   { title: "Levis Slim Fit Jeans", category: "Trousers", description: "Classic denim jeans with a modern slim fit.", image: "https://lsco.scene7.com/is/image/lsco/362000124-detail1-pdp-lse?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=1840" },
   { title: "Vintage New Balance Shoes", category: "Shoes", description: "Timeless shoes with a vintage vibe. You will love it", image: "https://i.ebayimg.com/images/g/qIgAAOSwtRVmuaBR/s-l1200.jpg" },
   { title: "Stone Island Puffer Jacket", category: "Jacket", description: "High-performance puffer coat for extreme weather.", image: "https://www.zoeteliefmode.nl/wp-content/uploads/2024/07/stone-island-43128-seamless-puffer-coat-bp_15mf_7hk_she55j.jpg" },
-  { title: "Patagonia Fleece Shirt", category: "Shirt", description: "Comfortable and eco-friendly fleece shirt.", image: "https://images.snowleader.com/cdn-cgi/image/f=auto,fit=scale-down,q=85/https://images.snowleader.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/P/A/PATA03589_03.jpg" },
+  { title: "Patagonia Fleece Shirt", category: "Shirt", description: "Comfortable and eco-friendly fleece shirt.", image: "https://images.snowleader.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/P/A/PATA03589_03.jpg" },
   { title: "Patagonia Rain Jacket", category: "Jacket", description: "Waterproof and breathable jacket for outdoor adventures.", image: "https://www.switchbacktravel.com/sites/default/files/images/articles/Patagonia%20Boulder%20Fork%20rain%20jacket%20%28backpacking%20in%20Chile%29.jpg" }
 ]
 category = ["trousers", "t-shirt", "shoes", "jackets", "dress", "suits"]
