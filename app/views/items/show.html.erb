@@ -17,7 +17,7 @@
       <p class="item-size"><strong>Size:</strong> <%= @item.size %></p>
       <p class="item-condition"><strong>Condition:</strong> <%= @item.condition %></p>
       <p class="item-description"><%= @item.description %></p>
-      <p class="item-price"><strong>Price per day:</strong> $<%= @item.price_per_day %></p>
+      <p class="item-price"><strong>Price per day:</strong> <%= @item.price_per_day %>€</p>
       <%= button_to 'Delete Item', item_path(@item), method: :delete,
     class: "btn btn-danger mt-3",
     data: { confirm: "Are you sure you want to delete this item?" } %>
@@ -39,9 +39,9 @@
     <% end %>
 
     <div class="summary">
-      <h3><span  data-price-calculator-target= "daysElement" id="num-days">0</span> days × $<%= @item.price_per_day %></h3>
-      <h3>Additional Fee: $5</h3>
-      <h2 class="total">Total: $<span data-price-calculator-target= "totalElement" id="total-price">5</span></h2>
+      <h3><span  data-price-calculator-target= "daysElement" id="num-days">0</span> days × <%= @item.price_per_day %>€</h3>
+      <h3>Additional Fee: 5€</h3>
+      <h2 class="total">Total: <span data-price-calculator-target= "totalElement" id="total-price">5€</span></h2>
     </div>
   </div>
 
