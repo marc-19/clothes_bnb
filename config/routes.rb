@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
 
-  resources :items, only: [:new, :create, :show] do
+  resources :items, only: [:index, :new, :create, :show, :destroy] do
     resources :bookings, only: [:create]
     post 'book', to: 'bookings#create', as: :book
   end

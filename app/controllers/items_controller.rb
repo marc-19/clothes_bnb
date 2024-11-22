@@ -1,10 +1,20 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
+  before_action :set_item, only: [:show, :destroy]
 
   def index
     @items = Item.all
     if params.dig(:search, :search).present?
       @items = @items.where("title ILIKE ? OR description ILIKE ?", "%#{params[:search][:search]}%", "%#{params[:search][:search]}%")
+    end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    if @item.destroy
+      redirect_to dashboard_user_path(current_user), notice: "Item deleted successfully."
+    else
+      redirect_to dashboard_user_path(current_user), alert: "Item could not be deleted."
     end
   end
 
@@ -37,4 +47,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:category, :size, :condition, :price_per_day, :description, :title, :image)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end
