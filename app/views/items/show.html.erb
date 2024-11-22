@@ -17,7 +17,7 @@
       <p class="item-size"><strong>Size:</strong> <%= @item.size %></p>
       <p class="item-condition"><strong>Condition:</strong> <%= @item.condition %></p>
       <p class="item-description"><%= @item.description %></p>
-      <p class="item-price"><strong>Price per day:</strong> $<%= @item.price_per_day %></p>
+      <p class="item-price"><strong>Price per day:</strong> <%= @item.price_per_day %> €</p>
       <% if @item.user == current_user %>
       <%= button_to 'Delete Item', item_path(@item), method: :delete,
     class: "btn btn-danger mt-3",
